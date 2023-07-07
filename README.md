@@ -17,11 +17,11 @@ flask --app app run
 
 ## Example
 
-![Website Interface](C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\homepage.png)
+<img alt="Website Interface" src="C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\homepage.png"/>
 
-![Website Interface](C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\coca-cola.png)
+<img alt="Website Interface" src="C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\coca-cola.png"/>
 
-![Website Interface](C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\pepsi.png)
+<img alt="Website Interface" src="C:\Users\Andriy\Desktop\Projects\python_advanced\pepsi_vs_cola\static\screenshots\pepsi.png"/>
 
 
 ## Links
