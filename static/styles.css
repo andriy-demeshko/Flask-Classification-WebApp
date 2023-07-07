@@ -1,0 +1,17 @@
+.home {
+    background-image: url("pictures/homepage.jpg");
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -2rem;
+}
+
+.big {
+    font-size: 25px;
+}
+
+.center {
+    margin: 5% 25% 25% 40%
+}

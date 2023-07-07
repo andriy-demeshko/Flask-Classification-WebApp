@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+  </head>
+  {% if label == 'Pepsi' %}
+  <body class="res" style="background-image: url('../static/pictures/pepsi.jpg')">
+  {% else %}
+  <body class="res" style="background-image: url('../static/pictures/cola.jpg')">
+  {% endif %}
+    <b>This is</b> {{label}}
+    <b>Probability</b> {{prob}}
+    <a href="http://127.0.0.1:5000/">Home</a>
+  </body>
+</html>
