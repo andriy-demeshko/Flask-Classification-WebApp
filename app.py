@@ -14,7 +14,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = STATIC_FOLDER + "upload/"
 
 cnn_model = tf.keras.models.load_model(
-    STATIC_FOLDER + "/models/" + "pepsi_coca",
+    STATIC_FOLDER + "/models/" + "pepsi_coca.keras",
     compile=False,
 )
 
@@ -26,11 +26,14 @@ def home():
 
 @app.post("/")
 def upload_image():
-    file = request.files["image"]
-    upload_image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+    try:
+        file = request.files["image"]
+        upload_image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+        file.save(upload_image_path)
+        label, prob = classify(cnn_model, upload_image_path)
 
-    file.save(upload_image_path)
+        return render_template("classification.html", label=label, prob=prob, upload_image_path=upload_image_path)
 
-    label, prob = classify(cnn_model, upload_image_path)
-
-    return render_template("classification.html", label=label, prob=prob)
+    except ValueError:
+        error_message = "Invalid image file format. Supported formats are JPEG, PNG, GIF, TIFF."
+        return render_template("error.html", error_message=error_message)

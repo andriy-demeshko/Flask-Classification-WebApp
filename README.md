@@ -23,6 +23,8 @@ flask --app app run
 
 ![Website Interface](static/screenshots/pepsi.png)
 
+![Website Interface](static/screenshots/error.png)
+
 
 ## Links
 

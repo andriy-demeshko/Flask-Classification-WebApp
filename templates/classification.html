@@ -5,13 +5,11 @@
     <title>Result</title>
     <link rel="stylesheet" type="text/css" href="../static/styles.css">
   </head>
-  {% if label == 'Pepsi' %}
-  <body class="res" style="background-image: url('../static/pictures/pepsi.jpg')">
-  {% else %}
-  <body class="res" style="background-image: url('../static/pictures/cola.jpg')">
-  {% endif %}
-    <b>This is</b> {{label}}
-    <b>Probability</b> {{prob}}
+  <body class="res" style="background-image: url({{ upload_image_path }})">
+    <b>This is</b> {{ label }}
+    <br>
+    <b>Probability</b> {{ prob }}
+    <br>
     <a href="http://127.0.0.1:5000/">Home</a>
   </body>
 </html>
